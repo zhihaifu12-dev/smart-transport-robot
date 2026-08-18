@@ -7,7 +7,7 @@ src/main.cpp
   -> RobotApp                 整车有限状态机
      -> Chassis               底盘命名接口
      -> ArmController         M5/M6/M7及区域任务接口
-     -> GripperController     夹爪和ID5储料盘接口
+     -> GripperController     ID4夹爪和ID5储料盘接口
      -> TaskPlanner           任务码解析和两批任务映射
      -> Diagnostics           状态与故障日志
      -> RouteConfig           路线和场地坐标
@@ -19,15 +19,14 @@ ArmController / GripperController
         -> StorageRuntime     储料盘取放公共实现
 ```
 
-`App_Vision`是独立工程。本项目只在`VisionController`和`VisionConfig`中定义既有
-协议字节，不包含、修改或烧录相机端源码。
+`App_Vision`是独立工程。本项目只在`VisionController`和`VisionConfig`中定义既有协议字节，不包含、修改或烧录相机端源码。
 
 ## 轴与编号
 
 - M5：机械臂底座步进电机，位置单位`0.1 degree`。
 - M6：机械臂水平伸缩轴，位置单位`0.1 mm`。
 - M7：机械臂垂直升降轴，位置单位`0.1 mm`。
-- ID5储料盘：总线舵机，不是M5。由`StorageController`管理。
+- ID5储料盘：总线舵机。由`StorageController`管理。
 
 业务层使用：
 
