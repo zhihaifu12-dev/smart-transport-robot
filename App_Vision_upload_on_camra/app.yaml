@@ -1,0 +1,9 @@
+id: vision
+name: Vision
+version: 8.0.2
+author: zzr
+icon: ''
+desc: Four-color top-center and circle digit recognition for MaixCamPro
+files:
+  - app.yaml
+  - main.py
